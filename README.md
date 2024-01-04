@@ -25,13 +25,27 @@
 - composer require "lexik/jwt-authentication-bundle"
 - symfony composer require api
 
-# Pasos
+# Pasos para el CRUD de User
 
 - Por facilidad de trabajo la base de datos será un sqlite en el propio repo. Modifico el .env para trabajar con sqlite https://www.sqlite.org/index.html
 - Crear la entidad user: php bin/console make:user
 - Crear formulario de registro: php bin/console make:registration-form (Sin validación de emails)
 - Creo el CRUD de User: php bin/console make:crud (El new lleva al register)
+- Formulario de login: php bin/console make:auth (Opción: Login form authenticator)
+
+# Pasos para los endpoints de Users
+
+- Generar las claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
+- Crear el controlador y las rutas para los endpoints: ApiUserController
+- Configuración del login a través de jwt en el security.yaml. De tal forma que me puedo recibir un token pasando un usuario y una contraseña válidas por POST a la ruta login_check. Comprobación con Postman
+<img src="https://jorgebenitezlopez.com/github/symfony.jpg">
+
+
+
 
 php bin/console doctrine:schema:update --force
-https://127.0.0.1:8000/register
+/register
+/user
+/user/[id]/edit
+/login
 
