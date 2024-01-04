@@ -32,20 +32,27 @@
 - Crear formulario de registro: php bin/console make:registration-form (Sin validación de emails)
 - Creo el CRUD de User: php bin/console make:crud (El new lleva al register)
 - Formulario de login: php bin/console make:auth (Opción: Login form authenticator)
+- Actualizar la Base de Datos: php bin/console doctrine:schema:update --force
 
 # Pasos para los endpoints de Users
 
 - Generar las claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
 - Crear el controlador y las rutas para los endpoints: ApiUserController
-- Configuración del login a través de jwt en el security.yaml. De tal forma que me puedo recibir un token pasando un usuario y una contraseña válidas por POST a la ruta login_check. Comprobación con Postman
-<img src="https://jorgebenitezlopez.com/github/symfony.jpg">
+- Configuración del login a través de jwt en el security.yaml. De tal forma que me puedo recibir un token pasando un usuario y una contraseña válidas por POST a la ruta login_check. Imagen de comprobación con Postman:
+<img src="https://jorgebenitezlopez.com/github/api-login.png">
+- Una vez que tengo el token lo mando al controlador de API para solicitar info del usuario. Imagen de comprobación con Postman:
+<img src="https://jorgebenitezlopez.com/github/api-info.png">
+- Para modificar los datos, loe envío en el body de la petición, los persisto y los vuelvo a enviar en formato JSON. Imagen de comprobación con Postman:
+<img src="https://jorgebenitezlopez.com/github/api-update.png">
 
+# Rutas de aplicación
 
-
-
-php bin/console doctrine:schema:update --force
-/register
-/user
-/user/[id]/edit
-/login
+| URL path | Método | Permisos | Descripción |
+| /register | GET | open | Formulario de registro |
+| /user | GET | Acceso permitido a usuarios | Listado de usuarios |
+| /user/[id]/edit | GET | Acceso permitido a usuarios | Edición de un usuario |
+| /login | GET | open | Formulario para logarse |
+| /api/login_check | POST | open | Mandas un usuario y una contraseña y devuelve un token |
+| /api/user/info | GET | Devuelve info de usuario en formato JSON | restringida para usuarios con token |
+| /api/user/info | POST | Guarda los datos enviados y la devuelve en formato JSON | restringida para usuarios con token |
 
