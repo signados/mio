@@ -30,13 +30,13 @@
 - Por facilidad de trabajo la base de datos será un sqlite en el propio repo. Modifico el .env para trabajar con sqlite https://www.sqlite.org/index.html
 - Crear la entidad user: php bin/console make:user
 - Crear formulario de registro: php bin/console make:registration-form (Sin validación de emails)
-<img src="https://jorgebenitezlopez.com/github/CRUD.png">
+<img src="https://jorgebenitezlopez.com/github/register.png" style="border: 1px solid #ccc;">
 
 - Creo el CRUD de User: php bin/console make:crud (El new lleva al register)
-<img src="https://jorgebenitezlopez.com/github/CRUD.png">
+<img src="https://jorgebenitezlopez.com/github/CRUD.png" style="border: 1px solid #ccc;">
 
 - Formulario de login: php bin/console make:auth (Opción: Login form authenticator)
-<img src="https://jorgebenitezlopez.com/github/login.png">
+<img src="https://jorgebenitezlopez.com/github/login.png" style="border: 1px solid #ccc;">
 
 - Actualizar la Base de Datos: php bin/console doctrine:schema:update --force
 
@@ -45,13 +45,13 @@
 - Generar las claves públicas y privadas de jwt: php bin/console lexik:jwt:generate-keypair
 - Crear el controlador y las rutas para los endpoints: ApiUserController
 - Configuración del login a través de jwt en el security.yaml. De tal forma que me puedo recibir un token pasando un usuario y una contraseña válidas por POST a la ruta login_check. Imagen de comprobación con Postman:
-<img src="https://jorgebenitezlopez.com/github/api-login.png">
+<img src="https://jorgebenitezlopez.com/github/api-login.png" style="border: 1px solid #ccc;">
 
 - Una vez que tengo el token lo mando al controlador de API para solicitar info del usuario. Imagen de comprobación con Postman:
-<img src="https://jorgebenitezlopez.com/github/api-info.png">
+<img src="https://jorgebenitezlopez.com/github/api-info.png" style="border: 1px solid #ccc;">
 
 - Para modificar los datos, loe envío en el body de la petición, los persisto y los vuelvo a enviar en formato JSON. Imagen de comprobación con Postman:
-<img src="https://jorgebenitezlopez.com/github/api-update.png">
+<img src="https://jorgebenitezlopez.com/github/api-update.png" style="border: 1px solid #ccc;">
 
 # Rutas de aplicación
 
@@ -64,3 +64,8 @@
 | /api/login_check   | POST   | open                               | Mandas un usuario y una contraseña y devuelve un token |
 | /api/user/info     | GET    | Devuelve info de usuario en formato JSON | Restringida para usuarios con token |
 | /api/user/info     | POST   | Guarda los datos enviados y los devuelve en formato JSON | Restringida para usuarios con token |
+
+
+# Extras
+
+- Mejora del diseño utilizando Boostrap
