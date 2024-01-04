@@ -69,3 +69,6 @@
 # Extras
 
 - Mejora del diseño utilizando Boostrap
+
+<img src="https://jorgebenitezlopez.com/github/boostrap.png" style="border: 1px solid #ccc;">
+
