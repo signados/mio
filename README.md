@@ -28,5 +28,6 @@
 # Pasos
 
 - Por facilidad de trabajo la base de datos será un sqlite en el propio repo. Modifico el .env para trabajar con sqlite https://www.sqlite.org/index.html
+- Crear la entidad user: php bin/console make:user
 
 
