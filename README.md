@@ -24,3 +24,9 @@
 - composer require --dev symfony/profiler-pack 
 - composer require "lexik/jwt-authentication-bundle"
 - symfony composer require api
+
+# Pasos
+
+- Por facilidad de trabajo la base de datos será un sqlite en el propio repo. Modifico el .env para trabajar con sqlite https://www.sqlite.org/index.html
+
+
