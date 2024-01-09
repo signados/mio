@@ -72,7 +72,7 @@
 
 <kbd><img src="https://jorgebenitezlopez.com/github/boostrap.png"></kbd>
 
-- Test: Instalaciones: composer require --dev symfony/test-pack y symfony/panther | composer require --dev dbrekelmans/bdi && vendor/bin/bdi detect drivers. Con su propia Base de Datos para los tests: DATABASE_URL="sqlite:///%kernel.project_dir%/var/dataTest.db". Ejecutar: php bin/phpunit
+- Test: Instalaciones: composer require --dev symfony/test-pack y symfony/panther | composer require --dev dbrekelmans/bdi && vendor/bin/bdi detect drivers. Con su propia Base de Datos para los tests: DATABASE_URL="sqlite:///%kernel.project_dir%/var/dataTest.db". Ejecutar: php bin/console --env=test doctrine:schema:create y php bin/phpunit
 
-<kbd><img src="https://jorgebenitezlopez.com/github/test.png"></kbd>
+<kbd><img src="https://jorgebenitezlopez.com/github/test2.png"></kbd>
 
