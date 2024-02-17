@@ -10,7 +10,7 @@
 - Composer: https://getcomposer.org/download/
 - Symfony 5.4: https://symfony.com/doc/5.x/index.html
 
-# Instalación de Symfomy y paquetes
+# Instalación de Symfony y paquetes
 
 - symfony new mio --version=5.4
 - composer require symfony/orm-pack
